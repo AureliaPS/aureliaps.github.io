@@ -1,0 +1,67 @@
+
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+
+
+  	<a-marker preset="hiro">
+
+
+            <!-- <a-box position='0 0.5 0' material='color: #72f946;'></a-box> --> -->
+
+          <a-sphere position="0 0.5 0" radius="1" color="#fffff"
+            wireframe="2">
+
+              <a-animation attribute="rotation"
+                           dur="10000"
+                           fill="forwards"
+                           to="0 360 0"
+                           repeat="indefinite">
+
+
+
+            </a-sphere>
+
+            <a-torus-knot position="0 0.5 0" color="#f9b2d2" arc="180" p="2" q="7" radius="0.5" radius-tubular="0.01">
+
+
+              <a-animation attribute="rotation"
+                           dur="10000"
+                           fill="forwards"
+                           to="360 0 0"
+                           repeat="indefinite">
+
+                           </a-animation>
+
+
+
+            </a-torus-knot>
+
+
+            <a-entity particle-system="preset: snow; particleCount: 10000">
+
+
+            <a-animation attribute="rotation"
+                         dur="30000"
+                         fill="forwards"
+                         to="0 360 0"
+                         repeat="indefinite">
+
+                         </a-animation>
+
+            </a-entity>
+
+
+
+
+    </a-marker>
+  	<a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
