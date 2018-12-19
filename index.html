@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+  <head>
+
+<!-- blahblah -->
+
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+    <!-- Include components after the A-Frame script, but before <a-scene>. -->
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+
+
+    <meta charset="utf-8">
+    <title> Aurelia PS </title>
+
+
+  </head>
+
+
+  <body>
+
+    <a-scene>
+        <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> -->
+
+        <a-sphere position="0 2 -5" radius="2" color="#fffff"
+        wireframe="2">
+
+          <a-animation attribute="rotation"
+                       dur="10000"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite">
+
+
+
+        </a-sphere>
+
+        <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+
+        <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="360" height="360" color="#b5e5f4"></a-plane> -->
+
+        <a-torus-knot position="0 2 -5" color="#f9b2d2" arc="180" p="2" q="7" radius="1" radius-tubular="0.05">
+
+
+          <a-animation attribute="rotation"
+                       dur="10000"
+                       fill="forwards"
+                       to="360 0 0"
+                       repeat="indefinite">
+
+                       </a-animation>
+
+
+
+        </a-torus-knot>
+
+
+        <a-entity particle-system="preset: snow; particleCount: 10000">
+
+
+        <a-animation attribute="rotation"
+                     dur="30000"
+                     fill="forwards"
+                     to="0 360 0"
+                     repeat="indefinite">
+
+                     </a-animation>
+
+        </a-entity>
+
+
+<!--
+        <a-assets>
+            <a-asset-item id="brainstem" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
+          </a-assets>
+
+          <a-entity gltf-model="#brainstem" position="0 0.7 -5" scale="1.5 1.5 1.5">
+
+            <a-animation attribute="rotation"
+                         dur="10000"
+                         fill="forwards"
+                         to="0 360 0"
+                         repeat="indefinite">
+
+                         </a-animation>
+
+
+
+          </a-entity> -->
+
+
+
+        <a-sky color="#91e1f9"></a-sky>
+      </a-scene>
+
+
+
+  </body>
+</html>
